@@ -31,10 +31,10 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li class="<%= @current_page == :home ? 'active' : '' %>"><a href="/">Home <span class="sr-only">(current)</span></a></li>
-          <li class="<%= @current_page == :submit ? 'active' : '' %>"><a href="/submit">Submit solution</a></li>
-          <li class="<%= @current_page == :ranklist ? 'active' : '' %>"><a href="/ranklist">Ranklist</a></li>
-          <li class="<%= @current_page == :status ? 'active' : '' %>"><a href="/status">Status</a></li>
+          <li class="<%= navigation_class(:home) %>"><a href="/">Home <span class="sr-only">(current)</span></a></li>
+          <li class="<%= navigation_class(:submit) %>"><a href="/submit">Submit solution</a></li>
+          <li class="<%= navigation_class(:ranklist) %>"><a href="/ranklist">Ranklist</a></li>
+          <li class="<%= navigation_class(:status) %>"><a href="/status">Status</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

@@ -1,5 +1,6 @@
 require 'bundler/setup'
 require 'sinatra'
+require "sinatra/reloader"
 require_relative 'jobs'
 require_relative 'models'
 
@@ -31,6 +32,11 @@ post '/do_submit' do
   redirect to('/submit')
 end
 
+helpers do
+  def navigation_class(page_name)
+    @current_page == page_name ? 'active' : ''
+  end
+end
 
 def user
   User.find_or_create_by(name: params['name'])
