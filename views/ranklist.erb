@@ -1,0 +1,12 @@
+<table class="table table-bordered table-striped">
+  <tr>
+    <th>Name</th>
+    <th>Total points</th>
+  </tr>
+<% @ranklist.each do |user_rank| %>
+  <tr>
+    <td><%= user_rank.user.name %></td>
+    <td><%= user_rank.total_points %></td>
+  </tr>
+<% end %>
+</table>

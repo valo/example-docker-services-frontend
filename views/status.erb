@@ -1,0 +1,14 @@
+<table class="table">
+  <tr>
+    <th>Name</th>
+    <th>Status</th>
+    <th>Points</th>
+  </tr>
+  <% @source_codes.each do |source_code| %>
+    <tr>
+      <td><%= source_code.user.name %></td>
+      <td><%= source_code.status %></td>
+      <td><%= source_code.points %></td>
+    </tr>
+  <% end %>
+</table>
